@@ -353,3 +353,35 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .viz .ipk { animation: none; }
   .btn { transition: none; }
 }
+
+/* Foto profil di hero */
+.hero .hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px 48px;
+}
+.hero .hero-top h1 {
+  font-size: clamp(1.6rem, 5.6vw, 4.2rem);
+}
+.hero .photo {
+  flex: 0 0 auto;
+  width: clamp(120px, 16vw, 200px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: var(--yellow);
+  border: 2.5px solid var(--ink);
+  border-radius: 28px;
+  box-shadow: 8px 8px 0 var(--pink);
+  transform: rotate(3deg);
+}
+@media (max-width: 700px) {
+  .hero .hero-top {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .hero .photo {
+    width: 130px;
+    box-shadow: 6px 6px 0 var(--pink);
+  }
+}
